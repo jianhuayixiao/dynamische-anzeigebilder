@@ -1,0 +1,109 @@
+body{background-color:#cce8cf;margin:0px;}
+ul{padding:0px;margin:0px;}
+li{list-style:none outside;}
+ul[data-liffect]{padding:2px;background-color:white;overflow:hidden;}
+ul[data-liffect] li{border:2px solid white;float:left;position:relative;opacity:1;}
+ul[data-liffect] li img{width:100px;display:block;}
+
+ul[data-liffect="pageTop"] li{
+	-moz-animation:pageTop 1000ms ease both;
+	-moz-transform-origin:50% 0;
+	-moz-animation-play-state:paused;
+}
+ul[data-liffect="fadeIn"] li{
+	-moz-animation:fadeIn 1000ms ease both;
+	-moz-animation-play-state:paused;
+}
+ul[data-liffect="flip"] li{
+	-moz-animation:flip 1000ms ease both;
+	-moz-transform-origin:50% 0;
+	-moz-animation-play-state:paused;
+}
+ul[data-liffect="bounce"] li{
+	-moz-animation:bounce 1000ms ease both;
+	-moz-transform-origin:50% 50%;
+	-moz-animation-play-state:paused;
+}
+ul[data-liffect="slideLeft"] li{
+	-moz-animation:slideLeft 1000ms ease both;
+	-moz-animation-play-state:paused;
+}
+ul.play li{
+	-moz-animation-play-state:running;
+}
+@-moz-keyframes pageTop{
+	0%{
+		opacity:0;
+		-moz-transform:perspective(400px)/*设置元素被查看位置的视图*/ rotateX(90deg);
+	}
+	100%{
+		opacity:1;
+		-moz-transform:perspective(400px) rotate(0deg);
+	}
+}
+@-moz-keyframes fadeIn{
+	0%{
+		opacity:0;
+		
+	}
+	100%{
+		opacity:1;
+		
+	}
+}
+@-moz-keyframes flip{
+	0%{
+		opacity:0;
+		-moz-transform:perspective(500px) rotateY(0);
+		-moz-animation-timing-function:ease-out;
+	}
+	40%{
+		-moz-transform:perspective(500px) translateZ(150px) rotateY(170deg);
+		-moz-animation-timing-function:ease-out;
+	}
+	50%{
+		-moz-transform:perspective(500px) translateZ(150px) rotateY(170deg) scale(1);
+		-moz-animation-timing-function:ease-in;
+	}
+	80%{
+		-moz-transform:perspective(500px) rotateY(360deg) scale(0.95);
+		-moz-animation-timing-function:ease-in;
+	}
+	100%{
+		opacity:1;
+		-moz-transform:perspective(500px) scale(0.95);
+		-moz-animation-timing-function:ease-in;
+	}
+}
+@-moz-keyframes bounce{
+	0%{
+		opacity:0;
+		-moz-transform:scale(0.3);
+	}
+	50%{
+		-moz-transform:scale(1.05);
+	}
+	70%{
+		-moz-transform:scale(0.9);
+	}
+	100%{
+		opacity:1;
+		-moz-transform:scale(1);
+	}
+}
+@-moz-keyframes slideLeft{
+	0%{
+		opacity:0;
+		left:-30px;
+	}
+	50%{
+		left:30px;
+	}
+	100%{
+		opacity:1;  
+		left:0;
+	}
+}
+
+
+

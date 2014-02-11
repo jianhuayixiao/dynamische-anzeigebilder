@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<title>test</title>
+		<link href="style.css" rel="stylesheet" />
+	</head>
+
+	<body>
+		<ul data-liffect="">
+			<li><img src="img/1.jpg" /></li>
+			<li><img src="img/2.jpg" /></li>
+			<li><img src="img/3.jpg" /></li>
+			<li><img src="img/4.jpg" /></li>
+			<li><img src="img/5.jpg" /></li>
+			<li><img src="img/6.jpg" /></li>
+		</ul>
+		<div >
+			<select id="effect">
+				<option>pageTop</option>
+				<option>fadeIn</option>
+				<option>flip</option>
+				<option>bounce</option>
+				<option>slideLeft</option>
+			</select>
+		</div>
+		<script type="text/javascript" src="jquery 1.9.0.js"> </script>
+		<script type="text/javascript">
+		
+			$(function(){
+				$("ul[data-liffect] li").each(function(i){
+					$(this).attr("style","-moz-animation-delay:" + i * 300 + "ms");
+					if(i === $("ul[data-liffect] li").size() - 1){
+						$("ul[data-liffect]").addClass("play");
+					}
+				});
+				
+				$("#effect").bind("change",function(){
+					
+					$("ul[data-liffect]").attr("data-liffect",$("#effect").val());
+				});
+				
+			});
+			
+			
+			
+			
+		</script>
+	</body>
+</html>
