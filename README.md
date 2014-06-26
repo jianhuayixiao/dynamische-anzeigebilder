@@ -5,7 +5,7 @@ dynamische-anzeigebilder
 ------------------------
 
 
-![Image text](http://github.com/jianhuayixiao/dynamische-anzeigebilder/raw/master/img/Beispiel.jpg)
+![Image text](https://github.com/jianhuayixiao/dynamische-anzeigebilder/raw/master/img/Beispiel.jpg)
 
 
 
